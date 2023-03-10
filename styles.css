@@ -1,0 +1,217 @@
+/* General Set-up (Fonts, margins, background colors) */
+
+/* Question 0. Import a font and make all text in the body using that font. Check the homework instructions for more information!*/
+
+body {
+    margin: 50px auto;
+    max-width: 1000px;
+    color: #3A3A3A;
+    font-family: 'PP Mori', sans-serif;
+    background-color:#1e1e1e;
+    text-align:center;
+
+
+}
+
+img {
+    border-radius: 100%;
+    width: 150px;
+    border: 4px solid #000000;
+    transition: ease-in-out 0.3s;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+h1 {
+    font-size: 45px;
+    transition: ease-in-out 0.2s;
+}
+
+h2 {
+    font-size: 32px;
+    transition: ease-in-out 0.2s;
+}
+h3 {
+    font-size: 28px;
+    transition: ease-in-out 0.2s;
+}
+h4 {
+    font-size: 24px;
+    transition: ease-in-out 0.5s;
+}
+
+p {
+    font-size: 16px;
+    transition: ease-in-out 0.2s;
+}
+
+b {
+    font-size: 16px;
+    transition: ease-in-out 0.5s;
+}
+
+em {
+    font-size: 16px;
+    transition: ease-in-out 0.5s;
+}
+
+ul {
+    font-size: 12px;
+    transition: ease-in-out 0.5s;
+}
+
+
+p:hover{
+    color: #f8f6f2;
+}
+
+h1:hover {
+   color: #FF612F;
+}
+
+img:hover {
+    background-color: #FF612F
+}
+
+
+
+/* Question 2. Add margin, padding, and borders to section tags! */
+section {
+    text-align: center;
+    padding: 50px;
+    margin: 15px;
+    border: 15px;
+}
+
+section {
+    text-align: center;
+    padding: 50px;
+    margin: 20px;
+    border: 15px;
+}
+
+
+/* Question 3. Add different background colors for all the different sections, by selecting them via ids. */
+
+
+#education { 
+    background-color:#333333;
+    color: #4d4d4d;
+    border-color: #A3917A;
+    border: 100px;
+
+}
+#education:hover { 
+    color: #d99712;
+
+}
+
+#experience { 
+    background-color:#515151;
+    color: #676767;
+    border-color: #A3917A;
+    border: 100px;
+}
+
+#experience:hover { 
+    color: #F8F6F2;
+}
+
+
+/* Experience Section */
+
+/* Question 4a. This is a little tougher! Use CSS Flexbox to display your experiences as shown in the diagram.
+ Hint: If you're stuck with finding values that work, check the homework instructions document for some help!*/
+
+.experience-wrapper {
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.experience-list-item {
+    /* Tip: Feel free to change anything here (e.g. border, background-color, etc.). 
+    Changing the padding and width might throws thiings off, but experiment with it and see what looks good. */
+    text-align: left;
+    width: 250px;
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    border-color: #F8F6F2;
+    border: 5px;
+
+    /* Tip: Add the transition attribute to make effects look smoother! 
+    This means the hover effect will slowly kick in for 0.2s. */
+    transition: ease-in-out 0.2s;
+}
+
+
+
+/* Question 4b. Let's take a break! Add a hover effect to each experience-list-item div. 
+Experiment with border, border-radius, background-color, or whatever you want!*/
+
+.experience-list-item:hover {
+    background-color: #FF612F;
+    border-color: #1e1e1e;
+    border: 5px;
+}
+
+
+
+
+/* Projects Section */
+
+#projects {
+    display: grid;
+    grid-template-columns: minmax(100px, 25%) 1fr;
+    text-align:right;
+      }
+
+#projects:hover {
+display: grid;
+grid-template-columns: minmax(100px, 25%) 1fr;
+text-align:right;
+background-color: #FF612F;
+color: #f8f6f2
+    }
+
+#contact{
+    color: #F8F6F2;
+}
+
+
+
+/* Contact Section */
+
+a:link {
+    font-family: 'DM Sans', sans-serif;
+    text-align: left;
+    color: #A3917A
+}
+
+a:visited {
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    color: #74432C
+}
+
+
+/* Question 7. Let's make this a little more mobile-friendly! Use a media query/breakpoint to make
+project-list-item and experience-list-item divs have a width of 100% for smaller devices.*/
+
+/* Small devices (portrait tablets and large phones, 600px screen and up) */
+@media only screen and (max-width: 600px) {
+    .experience-list-item {
+        width: 100%;
+    }
+    .experience-list-item {
+        width: 100%;
+    }
+    .project-list-item {
+        width: 100%;
+    }
+}
